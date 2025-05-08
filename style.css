@@ -1,0 +1,121 @@
+:root {
+    /* ### Primary */
+    --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+
+    /* ### Neutral */
+    --White-main-heading-stats: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+
+    --Font-size: 15px;
+}
+
+/* CENTRALIZAÇÃO DO CARTÃO */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main-background);
+}
+
+/* ORGANIZAÇÃO DO CARTÃO */
+.cartao {
+    /* width: 1100px;
+    height: 450px; */
+    display: grid;
+    grid-template:
+        "informacoes imagem-principal" 446px / 570px 540px;
+    background-color: var(--Dark-desaturated-blue-card-background);
+    border-radius: 10px;
+}
+
+.informacoes {
+    grid-area: informacoes;
+}
+
+.imagem-principal {
+    grid-area: imagem-principal;
+}
+
+/* ORGANIZAÇÃO DO CONTEÚDO DO CARTÃO */
+/* ORAGNIZAÇÃO DAS INFROMAÇÕES */
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    gap: 90px;
+    color: var(--Slightly-transparent-white-main-paragraph);
+}
+
+.informacoes .sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.informacoes .sobre h1 {
+    font-size: 40px;
+    font-family: 'Inter';
+    font-weight: 700;
+}
+
+.informacoes .sobre h1 span {
+    color: var(--Soft-violet-accent);
+}
+
+.informacoes .sobre p {
+    font-size: 15px;
+    font-family: 'Lexend Deca';
+    font-weight: 300;
+    line-height: 150%;
+    padding-right: 65px;
+    color: var(--Slightly-transparent-white-stat-headings);
+}
+
+.informacoes .alcance {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 115px;
+}
+
+.informacoes .alcance .numeros h2 {
+    font-family: 'Inter';
+}
+
+.informacoes .alcance .numeros p {
+    font-family: 'Lexend Deca';
+    font-weight: 200;
+    font-size: 13px;
+    color: var(--Slightly-transparent-white-stat-headings);
+}
+
+/* ORGANIZAÇÃO DA IMAGEM */
+.imagem-principal {
+    position: relative;
+    display: inline-block;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.imagem-principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.imagem-principal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 540px;
+    height: 446px;
+    background-color: var(--Soft-violet-accent);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    border-radius: 0px 10px 10px 0px;
+}
+

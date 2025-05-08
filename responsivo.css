@@ -1,0 +1,187 @@
+@media(max-width:1110px) {
+
+    /* CENTRALIZAÇÃO DO CARTÃO */
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-color: var(--Very-dark-blue-main-background);
+    }
+
+    /* ORGANIZAÇÃO DO CARTÃO */
+    .cartao {
+        display: grid;
+        grid-template:
+            "imagem-principal" 300px
+            "informacoes" 360px / 400px;
+        background-color: var(--Dark-desaturated-blue-card-background);
+        border-radius: 10px;
+        margin: 100px 0px;
+    }
+
+    .informacoes {
+        grid-area: informacoes;
+    }
+
+    .imagem-principal {
+        grid-area: imagem-principal;
+    }
+
+    /* ORGANIZAÇÃO DO CONTEÚDO DO CARTÃO */
+    /* ORAGNIZAÇÃO DAS INFROMAÇÕES */
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 60px 20px 60px;
+        gap: 70px;
+    }
+
+    .informacoes .sobre {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .informacoes .sobre h1 {
+        font-size: 30px;
+    }
+
+    .informacoes .sobre p {
+        font-size: 13px;
+        padding-right: 0px;
+    }
+
+    .informacoes .alcance {
+        padding-right: 0px;
+    }
+
+    .informacoes .alcance .numeros h2 {
+        font-size: 20px;
+    }
+
+    .informacoes .alcance .numeros p {
+        font-size: 10px;
+    }
+
+    /* ORGANIZAÇÃO DA IMAGEM */
+    .imagem-principal {
+        position: relative;
+        display: inline-block;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .imagem-principal img {
+        display: block;
+        width: 400px;
+        height: 300px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .imagem-principal::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 300px;
+        background-color: var(--Soft-violet-accent);
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+@media(max-width:415px) {
+
+    /* CENTRALIZAÇÃO DO CARTÃO */
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-color: var(--Very-dark-blue-main-background);
+    }
+
+    /* ORGANIZAÇÃO DO CARTÃO */
+    .cartao {
+        display: grid;
+        grid-template:
+            "imagem-principal" 200px
+            "informacoes" 250px / 300px;
+        background-color: var(--Dark-desaturated-blue-card-background);
+        border-radius: 10px;
+        margin: 100px 0px;
+    }
+
+    .informacoes {
+        grid-area: informacoes;
+    }
+
+    .imagem-principal {
+        grid-area: imagem-principal;
+    }
+
+    /* ORGANIZAÇÃO DO CONTEÚDO DO CARTÃO */
+    /* ORAGNIZAÇÃO DAS INFROMAÇÕES */
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 40px 20px 40px;
+        gap: 50px;
+    }
+
+    .informacoes .sobre {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .informacoes .sobre h1 {
+        font-size: 20px;
+    }
+
+    .informacoes .sobre p {
+        font-size: 10px;
+        padding-right: 0px;
+    }
+
+    .informacoes .alcance {
+        padding: 0px;
+    }
+
+    .informacoes .alcance .numeros h2 {
+        font-size: 15px;
+    }
+
+    .informacoes .alcance .numeros p {
+        font-size: 8px;
+    }
+
+    /* ORGANIZAÇÃO DA IMAGEM */
+    .imagem-principal {
+        position: relative;
+        display: inline-block;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .imagem-principal img {
+        display: block;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .imagem-principal::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 200px;
+        background-color: var(--Soft-violet-accent);
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
